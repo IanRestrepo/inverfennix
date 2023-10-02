@@ -1,0 +1,16 @@
+---
+    import MainLayout from './MainLayout.astro';
+    const { frontmatter } = Astro.props;
+---
+
+<MainLayout siteName={frontmatter.title}>
+<div class="flex flex-wrap justify-center py-10">
+    <div class="max-w-xl rounded-xl overflow-hidden mx-5">
+        <img src={frontmatter.image} alt="" class="w-full">
+    </div>
+    <div class="max-w-xl border-2 border-red-700 w-full">
+        <h1 class="text-5xl font-bold">{ frontmatter.title }</h1>
+        <p class=" block">{ frontmatter.description }</p>
+    </div>
+</div>
+</MainLayout>

@@ -1,0 +1,19 @@
+---
+import Card from '../components/Cards/Card.astro';
+const Cars = await Astro.glob('../pages/Merch/*.md');
+const { frontmatter } = Astro.props;
+---
+<div class="flex flex-wrap justify-center">
+    {
+        Cars.map((car) => (
+        <Card
+            productImg={car.frontmatter.image}
+			productOnSale={car.frontmatter.onSale}
+			productTitle={car.frontmatter.title}
+			productModel={car.frontmatter.model}
+			productYear={car.frontmatter.year}
+			productPage={car.frontmatter.page}
+	   		/>
+        ))
+    }
+</div>
