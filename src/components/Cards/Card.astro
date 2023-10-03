@@ -14,7 +14,7 @@
 <a href={productPage} class="border-2 rounded-xl max-w-sm max-h-lg min-h-full m-14 overflow-hidden flex flex-col columns-2 hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-300 transition-all">
     <img src={ productImg } alt="">
     <div class="px-3 py-5">
-        <span class={ productOnSale ? "px-3 py-1 bg-teal-200 text-teal-950 rounded-sm uppercase font-bold text-sm" : "px-3 py-1 bg-red-200 text-red-950 rounded-sm uppercase font-bold text-sm" }>{ productOnSale ? "On Sale" : "Out of Stock"}</span>
+        <span class={ productOnSale ? "px-1 py-1 text-[10px] bg-teal-200 text-teal-950 rounded-sm uppercase font-bold " : "px-1 py-1 bg-red-200 text-red-950 rounded-sm uppercase font-bold text-sm" }>{ productOnSale ? "En Venta" : "Vendida"}</span>
         <h1 class="font-bold text-2xl">{ productTitle }</h1>
         <small>{ productModel + " " + productYear }</small>
         <br>

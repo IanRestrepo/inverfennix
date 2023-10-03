@@ -6,6 +6,6 @@ interface Props {
 
 const { redirectUrl, message } = Astro.props;
 ---
-<a class="py-3 px-5 bg-gradient-to-r from-green-500 to-green-700 text-white font-bold uppercase rounded-md" href={ redirectUrl }>
+<a class="py-3 px-10 bg-sky-950 border-sky-500 border-2 text-sky-500  font-bold uppercase rounded-md hover:-translate-y-3 hover:shadow-2xl hover:shadow-sky-500 transition-all" href={ redirectUrl }>
     { message }
 </a>
