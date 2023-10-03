@@ -1,0 +1,11 @@
+---
+interface Props {
+    redirectUrl: any;
+    message: string;
+}
+
+const { redirectUrl, message } = Astro.props;
+---
+<a class="py-3 px-5 bg-gradient-to-r from-green-500 to-green-700 text-white font-bold uppercase rounded-md" href={ redirectUrl }>
+    { message }
+</a>

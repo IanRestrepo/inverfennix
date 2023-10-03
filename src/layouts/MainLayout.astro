@@ -6,13 +6,13 @@ import NavBar from '../components/NavBar.astro';
 
     const { siteName } = Astro.props;
 ---
-<html lang="en">
+<html data-theme="light" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{ siteName }</title>
 	</head>
 	<body>
 		<NavBar/>
