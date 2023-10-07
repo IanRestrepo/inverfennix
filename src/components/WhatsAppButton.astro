@@ -1,0 +1,14 @@
+---
+import WhatsAppImage from './images/WhatsAppButtonImage.webp'
+    interface Props {
+        number: string;
+    }
+
+    const { number } = Astro.props;
+---
+
+<div class="w-20 fixed bottom-20 right-20 hover:-translate-y-5 transition-all">
+    <a href={number}>
+    <img src={WhatsAppImage.src}>
+    </a>
+</div>

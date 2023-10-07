@@ -1,19 +1,20 @@
 ---
 import Card from '../components/Cards/Card.astro';
-const Cars = await Astro.glob('../pages/Merch/*.md');
-const { frontmatter } = Astro.props;
+
+
+const response = fetch("http://localhost:1337/api/products")
+  .then(res => {
+    console.log(res)
+  })
+  .catch(err => {
+    console.error(err)
+    console.log('Ian we have a problem!')
+  })
+
+const Cars = await response
 ---
 <div class="flex flex-wrap justify-center">
     {
-        Cars.map((car) => (
-        <Card
-            productImg={car.frontmatter.image}
-			productOnSale={car.frontmatter.onSale}
-			productTitle={car.frontmatter.title}
-			productModel={car.frontmatter.model}
-			productYear={car.frontmatter.year}
-			productPage={car.frontmatter.page}
-	   		/>
-        ))
+        JSON.stringify(Cars)
     }
 </div>

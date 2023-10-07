@@ -1,5 +1,6 @@
 ---
 import NavBar from '../components/NavBar.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
     interface Props {
         siteName: string;
     }
@@ -14,8 +15,9 @@ import NavBar from '../components/NavBar.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{ siteName }</title>
 	</head>
-	<body>
+	<body >
 		<NavBar/>
+		<WhatsAppButton number="https://wa.me/573161494980"/>
         <slot />
 	</body>
 </html>
