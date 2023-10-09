@@ -1,7 +1,27 @@
 ---
 	import MainLayout from "../layouts/MainLayout.astro";
-	import MerchLayout from "../layouts/MerchLayout.astro";
+	import Card from "../components/Cards/Card.astro";
+	import ProductPage from "../layouts/ProductPage.astro";
+
+	// const response = await fetch('http://127.0.0.1:1337/api/products?populate=*').then(res => res.json())
+
+
+	//const products = await response.data
 ---
 <MainLayout siteName="Home - Inverfennix">
-	<MerchLayout />
+	<div class="flex flex-wrap justify-center">
+		<!-- {
+			products.map(({attributes: {Title, Model, Year, OnSale, Url, ProductImage}}) => {
+				return( 
+				<Card 
+				productImg={`http://localhost:1337${ProductImage.data.attributes.formats.thumbnail.url}`}
+				productTitle={Title}
+				productModel={Model}
+				productYear={Year}
+				productOnSale={OnSale}
+				productPage={Url}
+				/>
+			)})
+		} -->
+	</div>
 </MainLayout>
